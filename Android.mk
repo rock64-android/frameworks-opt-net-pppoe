@@ -16,9 +16,6 @@ LOCAL_PATH := $(call my-dir)
 
 # Build the java code
 # ============================================================
-LOCAL_CFLAGS += -Wno-unused-parameter -Wno-int-to-pointer-cast
-LOCAL_CFLAGS += -Wno-maybe-uninitialized -Wno-parentheses
-LOCAL_CPPFLAGS += -Wno-conversion-null
 
 include $(CLEAR_VARS)
 
@@ -40,7 +37,7 @@ LOCAL_CFLAGS += -Wno-maybe-uninitialized -Wno-parentheses
 LOCAL_CPPFLAGS += -Wno-conversion-null
 
 LOCAL_SRC_FILES := \
-        jni/com_android_server_pppoe_PppoeNative.cpp
+        jni/pppoe_jni.cpp
 LOCAL_SHARED_LIBRARIES := \
         libandroid_runtime\
         libz \
